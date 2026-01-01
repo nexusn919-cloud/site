@@ -16,12 +16,33 @@
     }
 
     .heart-container {
-      width: 280px; /* leggermente più elegante */
+      width: 280px;
     }
 
     svg {
       width: 100%;
       height: auto;
+    }
+
+    /* ANIMAZIONE PULSAZIONE */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.05);
+      }
+      40% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .heart {
+      transform-origin: center;
+      animation: pulse 1.6s ease-in-out infinite;
     }
 
     .main-text {
@@ -49,8 +70,9 @@
   <div class="heart-container">
     <svg viewBox="0 0 512 512" aria-label="Cuore con 𝓐+𝓙 e data">
 
-      <!-- Cuore più slanciato -->
+      <!-- CUORE PULSANTE -->
       <path
+        class="heart"
         fill="#ff5aa5"
         d="M256 480
            C256 480 48 332 48 188
@@ -60,12 +82,12 @@
            C396 56 464 100 464 188
            C464 332 256 480 256 480Z" />
 
-      <!-- Iniziali -->
+      <!-- INIZIALI -->
       <text x="256" y="235" class="main-text">
         𝓐+𝓙
       </text>
 
-      <!-- Data -->
+      <!-- DATA -->
       <text x="257" y="300" class="date-text">
         20/06/2025
       </text>
