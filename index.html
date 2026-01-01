@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>𝓐+𝓙</title>
+  <title>A + J</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -24,20 +27,11 @@
       height: auto;
     }
 
-    /* ANIMAZIONE PULSAZIONE */
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      25% {
-        transform: scale(1.05);
-      }
-      40% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1);
-      }
+      0%   { transform: scale(1); }
+      25%  { transform: scale(1.05); }
+      40%  { transform: scale(1); }
+      100% { transform: scale(1); }
     }
 
     .heart {
@@ -47,20 +41,26 @@
 
     .main-text {
       fill: #fff;
-      font-size: 90px;
-      font-weight: 600;
+      font-family: 'Allura', cursive;
+      font-size: 92px;
       text-anchor: middle;
       dominant-baseline: middle;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.35);
       user-select: none;
+    }
+
+    /* J ELEGANTE IN CORSIVO */
+    .j-letter {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: 86px;
     }
 
     .date-text {
       fill: #fff;
-      font-size: 24px;
-      text-anchor: middle;
-      letter-spacing: 0.12em;
+      font-size: 22px;
+      letter-spacing: 0.14em;
       opacity: 0.85;
+      text-anchor: middle;
       user-select: none;
     }
   </style>
@@ -68,9 +68,8 @@
 <body>
 
   <div class="heart-container">
-    <svg viewBox="0 0 512 512" aria-label="Cuore con 𝓐+𝓙 e data">
+    <svg viewBox="0 0 512 512" aria-label="Cuore con A + J e data">
 
-      <!-- CUORE PULSANTE -->
       <path
         class="heart"
         fill="#ff5aa5"
@@ -82,14 +81,13 @@
            C396 56 464 100 464 188
            C464 332 256 480 256 480Z" />
 
-      <!-- INIZIALI -->
       <text x="256" y="235" class="main-text">
-        𝓐+𝓙
+        A +
+        <tspan class="j-letter">J</tspan>
       </text>
 
-      <!-- DATA -->
-      <text x="257" y="300" class="date-text">
-        20/06/2025
+      <text x="256" y="300" class="date-text">
+        20 / 06 / 2025
       </text>
 
     </svg>
